@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="">
+
+    {% load static %}
+    
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FMC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+        <!-- Normalize CSS -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <!-- Font-awesome CSS-->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <!-- Main Menu CSS -->
+        <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+        <!-- Magnific CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+        <!-- nivo slider CSS -->
+        <link rel="stylesheet" href="{% static 'vendor/slider/css/nivo-slider.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'vendor/slider/css/preview.css' %}" type="text/css" media="screen">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <!-- Modernizr Js -->
+        <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/pstyle.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an 
+        <strong>outdated</strong> browser. Please 
+        <a href="{% static 'http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+        <!-- Add your site or application content here -->
+        <!-- Preloader Start Here -->
+        <div id="preloader" class="preloader">
+            <div class="items">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        <!-- Preloader End Here -->
+       <div id="wrapper" class="wrapper">
+            <!-- Header Area Start Here -->            
+            <header>
+                <div id="header-one" class="header-area header-fixed full-width-compress">
+                    <div class="main-menu-area" id="sticker">
+                        <div class="container-fluid">
+                            <div class="row no-gutters d-flex align-items-center">
+                                <div class="col-lg-2 col-md-2 d-none d-lg-block">
+                                    <div class="logo-area">
+                                        <a href="#">
+                                            <img src="{% static 'img/logo.png' %}" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-6 possition-static">
+                                    <div class="eventalk-main-menu">
+                                        <nav class="d-none d-lg-block">
+                                            <ul>
+                                                <li class="current">
+                                                    <a href="#home">Home</a>
+                                                
+                                                </li>
+                                                <li class="menu-justify">
+                                                    <a href="{% url 'events' %}">Events</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="#pronite">Pronites & Talks</a>
+                                                    
+                                                </li>
+                                               
+                                                <li>
+                                                    <a href="#sponsor">Sponsors</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="{% url 'gallery' %}">gallery</a>
+                                                </li>
+                                                <!--<li>
+                                                    <a href="{% static '#contact">Contact</a>
+                                                </li>-->
+                                            <!--    <li class="current">
+                                                    <a href="{% static 'team.html">Team</a>
+                                                
+                                                </li>-->
+                                            </ul>
+                                        </nav>
+                                        <!-- Mobile Menu start -->
+                                        <nav id="dropdown" class="d-md-none">
+                                            <ul>
+                                                <li>
+                                                    <a href="#home">Home</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'events' %}">Events</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="#pronite">Pronites & Talks</a>
+                                                   
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="#sponsor">Sponsors</a>
+                                                   </li>
+                                                <li>
+                                                    <a href="{% url 'gallery' %}">gallery</a>
+                                                </li>
+                                              <!--  <li>
+                                                    <a href="{% static '#contact">Contact</a>
+                                                </li>-->
+                                            <!--    <li class="current">
+                                                    <a href="{% static 'team.html">Team</a>
+                                                
+                                                </li>-->
+                                            </ul>
+                                        </nav>
+                                        <!-- Mobile Menu End -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 d-none d-lg-block">
+                                    <ul class="header-action-items">
+                                        <li>
+                                            <a href="{% url 'register' %}" title="Register" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Slider Area Start Here --><!--
+            <div class="slider-area slider-direction-layout1 slider-layout1 overlay-slider">
+                <div class="bend niceties preview-1">
+                    <div id="ensign-nivoslider-1" class="slides">
+                        <img src="{% static 'img/slider/slide1-1.jpg" alt="slider" title="#slider-direction-1" />
+                        <img src="{% static 'img/slider/slide1-2.jpg" alt="slider" title="#slider-direction-2" />
+                        <img src="{% static 'img/slider/slide1-3.jpg" alt="slider" title="#slider-direction-3" />
+                    </div>
+                    <div id="slider-direction-1" class="t-cn slider-direction">
+                        <div class="slider-content s-tb slide-1">
+                            <div class="title-container s-tb-c title-light">
+                                <div class="container text-center">
+                                    <div class="slider-big-text first-line">
+                                        <p>Marketing</p>
+                                    </div>
+                                    <div class="slider-big-text second-line">
+                                        <p>Conferencee 2018</p>
+                                    </div>
+                                    <div class="slider-sub-text third-line">
+                                        <ul>
+                                            <li>17 - 25 October 2018</li>
+                                            <li>Tobacco Dock, London</li>
+                                        </ul>
+                                    </div>
+                                    <div class="slider-btn-area forth-line">
+                                        <a href="{% static 'register.html" class="btn-ghost color-yellow border-radius-5">Register Now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider-direction-2" class="t-cn slider-direction">
+                        <div class="slider-content s-tb slide-2">
+                            <div class="title-container s-tb-c title-light">
+                                <div class="container text-center">
+                                    <div class="slider-big-text first-line">
+                                        <p>Marketing</p>
+                                    </div>
+                                    <div class="slider-big-text second-line">
+                                        <p>Conferencee 2018</p>
+                                    </div>
+                                    <div class="slider-sub-text third-line">
+                                        <ul>
+                                            <li>17 - 25 October 2018</li>
+                                            <li>Tobacco Dock, London</li>
+                                        </ul>
+                                    </div>
+                                    <div class="slider-btn-area forth-line">
+                                        <a href="{% static 'register.html" class="btn-ghost color-yellow border-radius-5">Register Now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slider-direction-3" class="t-cn slider-direction">
+                        <div class="slider-content s-tb slide-3">
+                            <div class="title-container s-tb-c title-light">
+                                <div class="container text-center">
+                                    <div class="slider-big-text first-line">
+                                        <p>Marketing</p>
+                                    </div>
+                                    <div class="slider-big-text second-line">
+                                        <p>Conferencee 2018</p>
+                                    </div>
+                                    <div class="slider-sub-text third-line">
+                                        <ul>
+                                            <li>17 - 25 October 2018</li>
+                                            <li>Tobacco Dock, London</li>
+                                        </ul>
+                                    </div>
+                                    <div class="slider-btn-area forth-line">
+                                        <a href="{% static 'register.html" class="btn-ghost color-yellow border-radius-5">Register Now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <!-- Slider Area End Here -->
+            <!-- Countdown Area Start Here -->
+            <section class="full-width-container countdown-layout1">
+                <div class="container-fluid">
+                    <div id="countdown"></div>
+                </div>
+            </section>
+            <!-- Countdown Area End Here -->
+            <!-- About Area Start Here -->
+            <section class="section-space-equal bg-light">
+                <div class="container">
+                    <div class="about-layout1">
+                        <img src="{% static 'img/about/about-logo.png' %}" alt="logo" class="img-fluid">
+                        <h1 style="text-align:center;">
+                            About
+                        </h1>
+                        <p>The Film and Media Council of IIT (BHU), Varanasi started in 2014 by a few cinematography and digital arts enthusiasts, the council ever since promoted the culture of film making and appreciation amongst the student community of IIT (BHU). It includes various generes be it Photography or Cinematography, Creative Design or Animation, Media or Outreach. FMC provides platform where one get to know and experience the thrill of making portfolios be it film making or scripting, photography or designing, anime or outreach. The Council constantly and consistently works throughout the year putting up updates and highlights of all major and minor happenings of the institute via highlights, after movies, glimpses of the events, photographs, posters, merchandise, interviews, monthly and annual release of institute magazines and a lot more to follow.</p>
+                        <a href="{% url 'register' %}" title="Buy Your Ticket" class="btn-fill color-yellow border-radius-5">Register</a>
+                    </div>
+                </div>
+            </section>
+            <!-- About Page Area End Here -->
+            
+            <!-- Progress Area Start Here -->
+            <section class="progress-section-space bg-common progress-bg-color" style="background-image: url({% static 'img/figure/figure1.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-12">
+                            <div class="progress-layout1">
+                                <div class="media">
+                                    <div class="item-icon">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h3>IIT(BHU)</h3>
+                                        <p>PO Box 221005 Varanasi, Uttar Pradesh</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="progress-layout1">
+                                <div class="media">
+                                    <div class="item-icon">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h3>4k+ Participation</h3>
+                                        <p>2500+ T-Shirts Sold</p>
+                                        <p>7500+ Subscriptions and Newsletter</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="progress-layout1">
+                                <div class="media">
+                                    <div class="item-icon">
+                                        <i class="fa fa-clone" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h3>10+ Sponsor</h3>
+                                        <p>98.3 FM RADIO MIRCHI</p>
+                                        <p>ZOMATO</p>
+                                        <p>
+ZEBRONICS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Progress Area End Here -->
+            
+<div id="pronite" name="pronite" class="pronite">
+  <div class="blog-slider">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        
+        <img src="{% static 'img/bootwala.png' %}" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">November 2017</span>
+        <div class="blog-slider__title">Yahya Bootwala</div>
+        <div class="blog-slider__text"><i>Shayad tum galat ho.......</i></div>
+      </div>
+    </div>
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="{% static 'img/ramneeksingh.png' %}" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">November 2017</span>
+        <div class="blog-slider__title">Ramneek Singh</div>
+        <div class="blog-slider__text"><i>"paaji....."</i></div>
+      </div>
+    </div>
+    
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        <img src="{% static 'img/Ankita.png' %}" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <span class="blog-slider__code">November 2017</span>
+        <div class="blog-slider__title">Ankita Shah</div>
+        <div class="blog-slider__text"><i>"Borders........."</i></div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="blog-slider__pagination"></div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+
+  
+
+    <script  src="{% static 'js/pindex.js' %}"></script>
+
+</div>
+<div id="sponsor" name="sponsor"></div>
+   
+            <!-- Sponsonrs Area Start Here -->
+            <section class="section-space-default bg-light">
+                    <div class="container">
+                        <div class="section-heading title-black color-dark text-center">
+                            <h2>Offical Sponsors and Partners</h2>
+                            <p>Check Who Makes This Event Possible!</p>
+                        </div>
+                        <div class="sponsonrs-layout1">
+                            
+                            <div class="row sponsonrs-row-border">
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand1.png'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand2.png'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand3.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand4.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand5.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand6.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand7.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand8.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand9.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand10.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand11.png'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand12.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand13.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand14.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand15.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 col-12">
+                                    <div class="sponsonrs-box">
+                                        <a href="#">
+                                            <img src="{% static 'img/brand/brand16.jpg'%}" alt="brand" class="img-fluid">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           
+                        </div>
+                     
+                    </div>
+                </section>
+            <!-- Sponsonrs Area End Here -->
+            
+            <!-- Footer Area Start Here -->
+            <footer>
+                <div class="footer-layout1 bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#" class="footer-logo">
+                                    <img src="{% static 'img/logo-dark.png' %}" alt="logo" class="img-fluid">
+                                </a>
+                                <p>© 2018 FMC. All Rights Reserved. Designed by
+                                    <a target="_blank" href="https://radiustheme.com/">
+                                    FMC TEAM</a>
+                                </p>
+                                <div class="footer-social">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="youtube">
+                                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Area End Here -->
+        </div>
+        <!-- Wrapper End -->
+        <!-- jquery-->
+        <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+        <!-- Plugins js -->
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <!-- Popper js -->
+        <script src="{% static 'js/popper.js' %}"></script>
+        <!-- Bootstrap js -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Nivo slider js -->
+        <script src="{% static 'vendor/slider/js/jquery.nivo.slider.js' %}"></script>
+        <script src="{% static 'vendor/slider/home.js' %}"></script>
+        <!-- Meanmenu Js -->
+        <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+        <!-- Srollup js -->
+        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+        <!-- jquery.counterup js -->
+        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/waypoints.min.js' %}"></script>
+        <!-- Countdown js -->
+        <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+        <!-- Isotope js -->
+        <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+        <!-- Google Map js -->
+        <!-- Magnific Popup -->
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Custom Js -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript">
+            $('nav#dropdown').meanmenu({
+        siteLogo: "<div class='mobile-menu-nav-back'><a href='#'><img src={% static 'img/logo.png' %}/></a></div>"
+    });</script>
+    </body>
+
+
+</html>

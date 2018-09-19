@@ -1,0 +1,480 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FMC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+        <!-- Normalize CSS -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <!-- Font-awesome CSS-->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <!-- Main Menu CSS -->
+        <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+        <!-- Magnific CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+        <!-- nivo slider CSS -->
+        <link rel="stylesheet" href="{% static 'vendor/slider/css/nivo-slider.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'vendor/slider/css/preview.css' %}" type="text/css" media="screen">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <!-- Modernizr Js -->
+        <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/pstyle.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html {
+  background: #222;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.card {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  -webkit-perspective: 1500;
+  -webkit-transform-style: preserve-3d;
+  position: relative;
+  height: 300px;
+  width: 300px;
+  display: inline-block;
+  margin: 0 8px;
+}
+.card .front,
+.card .back {
+  overflow: hidden;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.7) 0 2px 6px -2px;
+  background: #fff;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  background-color: #222;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.card .front {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center  center;
+  transform: rotateY(0);
+  z-index: 2;
+}
+.card .front .title {
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
+.card .front .title h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+}
+.card .back {
+  background: #333;
+  transform: rotateY(-180deg);
+  padding: 20px;
+}
+.card .back p {
+  margin: 0 0 5px 0;
+  color:white;
+  font-size: 25px;
+  text-align: center;
+}
+.card .back .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+.card .btn {
+  padding: 10px;
+  display: block;
+  color: inherit;
+  border: 1px solid #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+}
+.card .btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(0);
+}
+.xoverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.xoverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+    </style>
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an 
+        <strong>outdated</strong> browser. Please 
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+        <!-- Add your site or application content here -->
+        <!-- Preloader Start Here -->
+        <div id="preloader" class="preloader">
+            <div class="items">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        <!-- Preloader End Here -->
+       <div id="wrapper" class="wrapper">
+            <!-- Header Area Start Here -->            
+            <header>
+                <div id="header-one" class="header-area header-fixed full-width-compress">
+                    <div class="main-menu-area" id="sticker">
+                        <div class="container-fluid">
+                            <div class="row no-gutters d-flex align-items-center">
+                                <div class="col-lg-2 col-md-2 d-none d-lg-block">
+                                    <div class="logo-area">
+                                        <a href="{% url 'index' %}">
+                                            <img src="{% static 'img/logo.png' %}" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-6 possition-static">
+                                    <div class="eventalk-main-menu">
+                                        <nav class="d-none d-lg-block">
+                                            <ul>
+                                                <li class="current">
+                                                    <a href="{% url 'index' %}">Home</a>
+                                                
+                                                </li>
+                                                <li class="menu-justify">
+                                                    <a href="#">Events</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'index' %}#pronite">Pronites & Talks</a>
+                                                    
+                                                </li>
+                                               
+                                                <li>
+                                                    <a href="{% url 'index' %}#sponsor">Sponsors</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="{% url 'gallery' %}">gallery</a>
+                                                </li>
+                                                <!--<li>
+                                                    <a href="#contact">Contact</a>
+                                                </li>-->
+                                            <!--    <li class="current">
+                                                    <a href="team.html">Team</a>
+                                                
+                                                </li>-->
+                                            </ul>
+                                        </nav>
+                                        <!-- Mobile Menu start -->
+                                        <nav id="dropdown" class="d-md-none">
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'index' %}#home">Home</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="#">Events</a>
+                                                    
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="{% url 'index' %}#pronite">Pronites & Talks</a>
+                                                   
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="{% url 'index' %}#sponsor">Sponsors</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'gallery' %}">gallery</a>
+                                                </li>
+                                              <!--  <li>
+                                                    <a href="#contact">Contact</a>
+                                                </li>-->
+                                            <!--    <li class="current">
+                                                    <a href="team.html">Team</a>
+                                                
+                                                </li>-->
+                                            </ul>
+                                        </nav>
+                                        <!-- Mobile Menu End -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 d-none d-lg-block">
+                                    <ul class="header-action-items">
+                                        <li>
+                                            <a href="{% url 'register' %}" title="Buy Tickets" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Header Area End Here -->
+            <!-- Inne Page Banner Area Start Here -->
+            <section class="inner-page-banner" style="background-image: url({% static 'img/figure/inner-page-figure.jpg' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumbs-area">
+                                <h1>Our Events</h1>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'index' %}">Home</a>
+                                    </li>
+                                    <li>Event</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Inne Page Banner Area End Here -->
+            <!-- Gallery Area Start Here -->
+            <div id="#"></div>
+            <div class="container">
+                    <div class="card">
+              <div class="front" style="background-image: url('http://kanal5.com.mk/uploads/mesi-39-.jpg')">
+                   <div class="title">
+                        <h2>Cinematography</h2>
+                   </div>
+              </div>
+              <div class="back">
+                  <a href="#popup"> <p>1.48 Hr Film-Making</p></a>
+        
+           <br>
+       <a href="#popup1">    <p>2.Take Two</p></a>
+           <br>
+         <a href="#popup2">  <p>3.Escapade</p></a>
+              </div>
+         </div>
+     <div class="card">
+        <div class="front" style="background-image: url('http://kanal5.com.mk/uploads/mesi-39-.jpg')">
+           <div class="title">
+              <h2>Design</h2>
+           </div>
+        </div>
+        <div class="back">
+        <a href="#popup3">   <p>1.Monogram</p></a>
+           <br>
+        <a href="#popup4">   <p>2.Cover Art</p></a>
+        </div>
+     </div>
+     <div class="card">
+        <div class="front" style="background-image: url('http://kanal5.com.mk/uploads/mesi-39-.jpg')">
+           <div class="title">
+              <h2>Animation</h2>
+           </div>
+        </div>
+        <div class="back">
+        <a href="#popup5">   <p>1.3Draw</p></a>
+        </div>
+     </div>
+         <div class="card">
+              <div class="front" style="background-image: url('https://3.bp.blogspot.com/-Ojf1mVqggcQ/TsBYjmLiBWI/AAAAAAAAAhw/fDDzW_zst6w/s1600/Dimitar+Berbatov+Manchester+united+vs+sunderland+fc.jpg')">
+                <div class="title">
+                        <h2>photography</h2>
+                   </div>
+              </div>
+              <div class="back">
+                <a href="#popup6">   <p>1.Snapchase</p></a>
+           <br>
+        <a href="#popup7">   <p>2.Instameet</p></a>
+           <br>
+           <a href="#popup8"><p>3.Memoravel</p>
+           </a><br>
+            <a href="#popup9"><p>4.Selfie</p></a>
+           <br>
+           <a href="#popup10"><p>5.PhotoArt</p></a>
+
+              </div>
+         </div>
+         <div class="card">
+              <div class="front" style="background-image:url('http://football-uniform.up.n.seesaa.net/football-uniform/image/Bulgaria-94-adidas-white-white-white.JPG?d=a0')">
+                 <div class="title">
+                        <h2>Media</h2>
+                   </div>
+              </div>
+              <div class="back">
+                  <a href="#popup11"><p>1.Against All Odds</p></a>
+           <br>
+          <a href="#popup12"> <p>2.Compressify</p></a>
+           <br>
+          <a href="#popup13"> <p>3.Live Action</p></a>
+              </div>
+         </div>
+     <div class="card">
+        <div class="front" style="background-image:url('http://football-uniform.up.n.seesaa.net/football-uniform/image/Bulgaria-94-adidas-white-white-white.JPG?d=a0')">
+           <div class="title">
+              <h2>Outreach</h2>
+           </div>
+        </div>
+        <div class="back">
+          <a href="#popup14"> <p>1.All In</p></a>
+           <br>
+          <a href="#popup15"> <p>2.Write-O-Mania</p></a>
+           <br>
+          <a href="#popup16"> <p>3.Documentary Making</p></a>
+        </div>
+     </div>
+        </div>
+
+
+
+
+<div id="popup1" class="xoverlay">
+  <div class="popup">
+    <h2>Here i am</h2>
+    <a class="close" href="#">&times;</a>
+    <div class="content">
+      Thank to pop me out of that button, but now i'm done so you can close this window.
+    </div>
+  </div>
+</div>
+
+            <!-- Gallery Area End Here -->
+           
+            <!-- Footer Area Start Here -->
+           
+            <!-- Footer Area End Here -->
+        </div>
+        <!-- Wrapper End -->
+        <!-- jquery-->
+        <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+        <!-- Plugins js -->
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <!-- Popper js -->
+        <script src="{% static 'js/popper.js' %}"></script>
+        <!-- Bootstrap js -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Meanmenu Js -->
+        <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+        <!-- Srollup js -->
+        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+        <!-- Isotope js -->
+        <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+        <!-- Magnific Popup -->
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Custom Js -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript">
+        $('nav#dropdown').meanmenu({
+        siteLogo: "<div class='mobile-menu-nav-back'><a href='kachra.html'><img src={% static 'img/logo.png' %}/></a></div>"
+    });
+        </script>
+    </body>
+
+
+</html>

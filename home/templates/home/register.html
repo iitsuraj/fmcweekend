@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	{% load static %}
+  <meta charset="UTF-8">
+  <title>FMC WEEKEND REGISTRATION</title>
+          <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+
+	  <!-- <script>
+			$(":input").inputmask();
+			$("#contact").inputmask({"mask":"9999999999"});
+		</script> -->
+</head>
+
+<body>
+
+  <body>
+    <div class="image-container set-full-height" style="background-image: url({% static 'register/bike.jpg' %})">
+	    <!--   Creative Tim Branding   -->
+	  
+		
+
+	    <!--   Big container   -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+		            <!-- Wizard container -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="red" id="wizard">
+		                    <form action="" method="POST" name="reg_form" id="reg_form">
+		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title">
+		                        		Registration
+		                        	</h3>
+									<h5>This information will let us know more about you.</h5>
+		                    	</div>
+								<div class="wizard-navigation">
+									<ul>
+			                            <li><a href="#details" data-toggle="tab">Details</a></li>
+			                            <!-- <li><a href="#captain" data-toggle="tab">Workshop</a></li> -->
+			                            <li><a href="#description" data-toggle="tab">Events</a></li>
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="details">
+		                            	<div class="row">
+			                            	<div class="col-sm-12">
+			                                	<h4 class="info-text"> Let's start with the basic details.</h4>
+			                            	</div>
+		                                	<div class="col-sm-6">
+												<div class="input-group">
+													<span class="input-group-addon">
+														
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Team Name</label>
+			                                          	<input id="team_name" name="team_name" type="text" class="form-control" required>
+			                                        </div>
+												</div>
+
+												<div class="input-group">
+													<span class="input-group-addon">
+														
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Leader Name</label>
+			                                          	<input  id="team_leader" name="team_leader" type="text" class="form-control" required>
+			                                        </div>
+												</div>
+
+		                                	</div>
+		                                	<div class="col-sm-6">
+		                                    	<div class="input-group">
+													<span class="input-group-addon">
+														
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">College Name</label>
+			                                          	<input id="college" name="college" type="text" class="form-control" required>
+			                                        </div>
+												</div>
+
+												<div class="input-group">
+													<span class="input-group-addon">
+														
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Contact Number</label>
+			                                          	<input id="contact" name="contact" type="tel" pattern="^[6-9]\d{9}$" class="form-control" required>
+													</div>
+													<!--  -->
+												</div>
+		                                	</div>
+		                                	<div class="col-sm-6">
+		                                    	<div class="input-group">
+													<span class="input-group-addon">
+														
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Email</label>
+			                                          	<input id="email" name="email" type="email"  class="form-control" required>
+			                                        </div>
+												</div>
+		                                	</div><div class="col-sm-6">
+		                                    	<div class="input-group">
+													<span class="input-group-addon">
+														
+													</span>
+													<div class="form-group label-floating">
+			                                          	<label class="control-label">Accommodation Number</label>
+			                                          	<input id="accomodation" name="accomodation" type="text" class="form-control" required value="0" >
+			                                        </div>
+												</div>
+											</div>
+		                                	<div class="col-sm-6">
+													<div class="input-group">
+														<span class="input-group-addon">
+															
+														</span>
+														<div class="form-group label-floating">
+															  <label class="control-label">Total number of team members</label>
+															  <input id="team_size" name="team_size" type="text" class="form-control" required value="1">
+														</div>
+													</div>
+												</div>
+		                            	</div>
+		                            </div>
+		                            <!-- div class="tab-pane" id="captain">
+		                                <h4 class="info-text">Which type of Workshop would you want? </h4>
+		                                <div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1">
+		                                    	<div class="col-sm-6">
+		                              <      		<div class="col-sm-4">
+		                                    			<h3>WORKSHOP!</h3>
+		                                    		</div>
+		                                        
+		                                    </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="form-group label-floating">
+		                                        	<label class="control-label">pass
+		                                        	</label>
+													<label class="control-label">No. of passes</label>
+													<input id="workshop1" name="workshop1" type="text" class="form-control" required value="0">
+		                                    	</div>
+		                                        </div>
+		                                       	<div class="col-sm-6">
+		                                    		<div class="col-sm-4">
+		                                    			<h3>WORKSHOP!</h3>
+		                                    		</div>
+		                                        
+		                                    </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="form-group label-floating">
+		                                        	<label class="control-label">pass
+		                                        	</label>
+													<label class="control-label">No. of passes</label>
+													<input id="workshop2" name="workshop2" type="text" class="form-control" required value="0">
+		                                    	</div>
+		                                        </div>	<div class="col-sm-6">
+		                                    		<div class="col-sm-4">
+		                                    			<h3>WORKSHOP!</h3>
+		                                    		</div>
+		                                        
+		                                    </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="form-group label-floating">
+		                                        	<label class="control-label">pass
+		                                        	</label>
+													<label class="control-label">No. of passes</label>
+													<input id="workshop3" name="workshop3" type="text" class="form-control" required value="0">
+		                                    	</div>
+		                                        </div>
+								
+		                                    </div>
+		                                </div>
+		                            </div> -->
+		                            <div class="tab-pane" id="description">
+		                                <div class="row">
+		                                	<h4 class="info-text"> Paid Online Events</h4>
+		                                	<div class="col-sm-10 col-sm-offset-1">
+		                                    
+		                                    
+		                                   <div style="text-align: center;" id="paid_events">
+		                                   <div class="col-sm-6">
+												<label><input id="e_against_all_odds" class="online" type="checkbox" name="e_against_all_odds"> Against All Odds</label>
+												
+<br>
+												<label><input id="e_write_o_maniac" class="online"  type="checkbox" name="e_write_o_maniac"> Write-o-Maniac</label>
+
+		                                	</div>
+		                                	<div class="col-sm-6">
+		                                    
+												<label><input id="e_documentary_making" class="online"  type="checkbox" name="e_documentary_making"> Documentary Making</label>
+												
+<br>
+												<label><input id="e_cover_art" class="online"  type="checkbox" name="e_cover_art"> Cover Art</label>
+
+		                                	
+		                                	</div>
+
+											<div class="col-sm-6">
+		                                   		<label><input id="e_escapade" class="online"  type="checkbox" name="e_escapade"> Escapade</label>
+											</div>
+											 </div>
+											 <div class="col-sm-10 col-sm-offset-1">
+		                                    
+		                                    
+													<div style="text-align: center;" id="paid_events">
+															<h4 class="info-text"> Free Online Events</h4> 
+															<div class="col-sm-6"> <label><input id="f_3draw" class="online" type="checkbox" name="f_3draw"> 3-Draw</label> </div>
+															<div class="col-sm-6"> <label><input id="f_allin" class="online" type="checkbox" name="f_allin"> All In</label> </div> 
+															<div class="col-sm-6"> <label><input id="f_take_two" class="online" type="checkbox" name="f_take_two"> Take Two</label> </div>
+															<div class="col-sm-6"> <label><input id="f_memoravel" class="online" type="checkbox" name="f_memoravel"> Memoravel</label> </div>
+															<div class="col-sm-6"> <label><input id="f_selfie" class="online" type="checkbox" name="f_selfie"> Selfie</label> </div>
+															<div class="col-sm-6"> <label><input id="f_monogram" class="online" type="checkbox" name="f_monogram"> Monogram</label> </div>
+													</div></div>
+											<div class="col-sm-10 col-sm-offset-1">
+		                                    
+		                                    
+											<div style="text-align: center;" id="paid_events">
+		                                <h4 class="info-text"> Offline Event</h4>
+		                             <div style="text-align: center;">
+		                                   <div class="col-sm-12">
+												<label><input id="offline_reg" type="checkbox" name="offline_reg"> All Event Pass</label>
+											</div>
+											</div></div>
+		                                        
+		                                  
+		                                </div></div>
+
+		                            </div>
+		                            </div>
+		                        </div>
+	                        	<div class="wizard-footer">
+	                            	<div class="pull-right">
+	                                    <input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' onclick="return(validate());"  />
+	                                    <input type='submit' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
+	                                </div>
+	                                <div class="pull-left">
+	                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+
+										
+	                                </div>
+	                                <div class="clearfix"></div>
+	                        	</div>
+							</form>
+							<div style="text-align:center;">
+							<button type="button" class="btn btn-info" ><p style="font-size: 25px;" id="totamount">0</p></button>
+						</div>
+						{% if messages %}
+						{% for msg in messages %}
+							<p class="{{msg.tags}}"><h2 color="white" style="text-align :center;"><b>{{msg}}</b></p></h1>
+						{% endfor %}
+						{% endif %}
+		            </div> <!-- wizard container -->
+		        </div>
+	    	</div> <!-- row -->
+		</div> <!--  big container -->
+
+	    <div class="footer">
+	        <div class="container text-center">
+	             Made with <i class="fa fa-heart heart"></i> by FMC TEAM.
+	        </div>
+	    </div>
+	</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="{% static 'register/js/index.js' %}"></script>
+
+	<script type="text/javascript">
+		try{
+		// console.log(total);
+		function calcAndShowTotal() {	
+			var total = 0;
+			if($('#offline_reg').prop('checked')==false){		
+				$('#paid_events :checkbox:checked').each(function() {
+					total += parseInt("{{ecost}}")*parseInt($('#team_size').val());
+				});
+				console.log(total);
+			// $('#total').val(total*parseInt("{{ecost}}"));
+			}
+			else{
+				total+=parseInt($('#team_size').val())*parseInt("{{offcost}}");
+				total+=parseInt("{{acost}}")*parseInt($('#accomodation').val());
+				console.log(total);
+			}	
+			$('#totamount').text(""+total);
+		}
+		$('#paid_events :checkbox').change(calcAndShowTotal).change();
+		$('#offline_reg').change(calcAndShowTotal);
+		$('#accomodation').change(calcAndShowTotal);
+		$('#team_size').change(calcAndShowTotal);
+		$('#offline_reg').click(function(){
+			$("input.online").prop("disabled", this.checked);
+			$("input.online").prop("checked",false);
+		})
+		}
+		catch(err){
+			console.log("error");
+			$('#totamount').val("ERR");
+		}
+		function validate()
+      {         
+         var reg = /^\d+$/;
+            if( reg.test(document.reg_form.accomodation.value) == false )
+        
+         if(parseInt(document.reg_form.accomodation.value)<0){
+             alert(" Accomodation should be positive number");
+             document.reg_form.accomodation.focus();
+             return false;
+         }
+         return( true );
+      }
+	</script>
+
+
+</body>
+
+</html>

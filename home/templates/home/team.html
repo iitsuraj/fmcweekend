@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <title>Team register</title>
+  
+  
+  
+      <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+
+  
+</head>
+
+<body>
+
+    <body>
+  <form action="" method="POST" id="myform">
+    {% csrf_token %}
+    <fieldset>
+      <input id="team_name" type="text" name="team_name" required>
+      <label for="first">Team Name</label>
+      <div class="after"></div>
+    </fieldset>
+    <fieldset>
+      <input id="team_leader" type="text" name="team_leader" required>
+      <label for="College">Leader Name</label>
+      <div class="after"></div>
+    </fieldset>
+    <fieldset>
+      <input id="accomodation" type="text" name="accomodation" required>
+      <label for="accomodation">Accomodation for how many people</label>
+      <div class="after"></div>
+    </fieldset>
+    <fieldset>
+      <fieldset>
+      <input id="contact" type="text" name="contact" required>
+      <label for="first">Contact Number</label>
+      <div class="after"></div>
+    </fieldset>
+     <fieldset>
+      
+    <fieldset>
+      <input id="emid" type="text" name="email" required>
+      <label for="first">Email</label>
+      <div class="after"></div>
+    </fieldset>
+    <!-- <fieldset>
+      <input id="offline_reg" type="checkbox" name="offline" value="offline_check">Want offline registration?<br>
+      <label for="offline_reg">Offline Registration</label>
+      <div class="after"></div>
+    </fieldset> -->
+    <fieldset>
+      <input type="submit">
+    </fieldset>
+  </form>
+<div id="errors_log" hidden>
+
+</div>
+
+</body>
+  
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+    <script  src="{% static 'register/js/index.js' %}"></script>
+<!-- 
+    <script type="text/javascript">
+      console.log("OK");
+      $('#errors_log').hide()
+    $(document).on('submit','#myform',function(e){
+      e.preventDefault();
+      // console.log($('input[name=csrfmiddlewaretoken]').val());
+      $.ajax({
+        type:'POST',
+        url:"",
+        data:{
+          team_name:$('#team_name').val(),
+          team_leader:$('#team_leader').val(),
+          accomodation:$('#accomodation').val(),
+          contact:$('#contact').val(),
+          email:$("#emid").val(),
+          offline_reg:$('#offline_reg').is(":checked"),
+          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+        },
+        success:function(json){
+          // alert("It worked");
+          if(json['error_message']){
+            if(json['error_message']=='success'){
+              $('#errors_log').hide()
+              $('#myform').hide();
+              $('body').append("<p>Coooool</p>");
+              console.log(json['cost']);
+            }
+            console.log(json['error_message']);
+            $('#errors_log').show()
+            $('#errors_log').html(json['error_message'])
+            
+          }
+          else{           
+            // $('#errors_log').show()
+            console.log("No error message received");
+          }
+        },
+        failure:function(){
+          alert("nopes");
+        }
+      })
+    })
+    </script>
+
+ -->
+
+</body>
+
+</html>

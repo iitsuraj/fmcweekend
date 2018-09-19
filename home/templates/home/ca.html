@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+            Ca Page
+        </title>
+    </head>
+    <body>
+    this is a test page<br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+    </form>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+
+
+
+        	console.log("OK");
+$(document).on('submit','#formmm',function(e){
+	e.preventDefault();
+	// console.log($('input[name=csrfmiddlewaretoken]').val());
+	$.ajax({
+		type:'POST',
+		url:"{% url 'ca' %}",
+		data:{
+			name:$('#id_name').val(),
+            age:$('#id_year').val(),
+            email:$('#id_email').val(),
+            college:$('#id_college').val(),
+            contact:$('#id_contact').val(),
+            whatsapp:$('#id_whatsapp').val(),            
+			csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+		},
+		success:function(json){
+			alert("It worked");
+            console.log(json);
+            // $('#formmm').hide();
+
+		},
+		error:function(){
+			console.log("Error");
+		}
+	})
+})
+    
+    
+    
+    
+    </script>
+    </body>
+</html>
