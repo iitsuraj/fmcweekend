@@ -107,9 +107,10 @@
                                                  <li>
                                                     <a href="#">gallery</a>
                                                 </li>
-                                                <!--<li>
-                                                    <a href="{% static '#contact">Contact</a>
-                                                </li>-->
+                                                <li>
+                                                    <a href="{% url 'team' %}">Team</a>
+                                                </li>
+                                                
                                             <!--    <li class="current">
                                                     <a href="{% static 'team.html">Team</a>
                                                 
@@ -139,9 +140,12 @@
                                                 <li>
                                                     <a href="#">gallery</a>
                                                 </li>
-                                              <!--  <li>
-                                                    <a href="#contact">Contact</a>
-                                                </li>-->
+                                              <li>
+                                                    <a href="{% url 'team' %}">Team</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{% url 'register' %}" title="Buy Tickets" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
+                                                    </li>
                                             <!--    <li class="current">
                                                     <a href="team.html">Team</a>
                                                 
@@ -154,7 +158,7 @@
                                 <div class="col-lg-3 col-md-4 d-none d-lg-block">
                                     <ul class="header-action-items">
                                         <li>
-                                            <a href="#" title="Buy Tickets" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
+                                            <a href="{% url 'register' %}" title="Buy Tickets" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -196,7 +200,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/1.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/1.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/1.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -206,7 +210,7 @@
                                 <a class="" href=" #">
                                     <img src="{% static 'img/gallery/2.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/2.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/2.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -216,7 +220,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/3.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/3.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/3.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -226,7 +230,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/4.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/4.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/4.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -236,7 +240,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/5.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/5.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/5.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -246,7 +250,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/6.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/6.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/6.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -256,7 +260,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/7.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/7.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/7.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -266,7 +270,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/8.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/8.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/8.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -276,7 +280,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/9.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/9.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/9.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -286,7 +290,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/10.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/10.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/10.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -296,7 +300,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/11.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/11.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/11.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -306,7 +310,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/12.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/12.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/12.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -316,7 +320,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/13.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/13.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/13.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -326,7 +330,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/14.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/14.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/14.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>
@@ -336,7 +340,7 @@
                                 <a class="" href="#">
                                     <img src="{% static 'img/gallery/15.jpg' %}" alt="Gallery" class="width-100 img-fluid">
                                 </a>
-                                <a href="{% static 'img/gallery/15.jpg' %}" class="ne-zoom img-popup-icon" title="Title Here">
+                                <a href="{% static 'img/gallery/15.jpg' %}" class="ne-zoom img-popup-icon" title="">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
                             </div>

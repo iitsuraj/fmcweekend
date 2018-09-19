@@ -1,119 +1,475 @@
-<!DOCTYPE html>
-<html lang="en" >
+<!doctype html>
+<html class="no-js" lang="">
 
-<head>
-  {% load static %}
-  <meta charset="UTF-8">
-  <title>Team register</title>
-  
-  
-  
-      <link rel="stylesheet" href="{% static 'register/css/style.css' %}">
+    
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>  
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FMC</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+        <!-- Normalize CSS -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <!-- Font-awesome CSS-->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <!-- Main Menu CSS -->
+        <link rel="stylesheet" href="{% static 'css/meanmenu.min.css' %}">
+        <!-- Magnific CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+        <!-- nivo slider CSS -->
+        <link rel="stylesheet" href="{% static 'vendor/slider/css/nivo-slider.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'vendor/slider/css/preview.css' %}" type="text/css" media="screen">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <!-- Modernizr Js -->
+        <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/pstyle.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  
-</head>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
 
-<body>
+    </head>
 
     <body>
-  <form action="" method="POST" id="myform">
-    {% csrf_token %}
-    <fieldset>
-      <input id="team_name" type="text" name="team_name" required>
-      <label for="first">Team Name</label>
-      <div class="after"></div>
-    </fieldset>
-    <fieldset>
-      <input id="team_leader" type="text" name="team_leader" required>
-      <label for="College">Leader Name</label>
-      <div class="after"></div>
-    </fieldset>
-    <fieldset>
-      <input id="accomodation" type="text" name="accomodation" required>
-      <label for="accomodation">Accomodation for how many people</label>
-      <div class="after"></div>
-    </fieldset>
-    <fieldset>
-      <fieldset>
-      <input id="contact" type="text" name="contact" required>
-      <label for="first">Contact Number</label>
-      <div class="after"></div>
-    </fieldset>
-     <fieldset>
-      
-    <fieldset>
-      <input id="emid" type="text" name="email" required>
-      <label for="first">Email</label>
-      <div class="after"></div>
-    </fieldset>
-    <!-- <fieldset>
-      <input id="offline_reg" type="checkbox" name="offline" value="offline_check">Want offline registration?<br>
-      <label for="offline_reg">Offline Registration</label>
-      <div class="after"></div>
-    </fieldset> -->
-    <fieldset>
-      <input type="submit">
-    </fieldset>
-  </form>
-<div id="errors_log" hidden>
-
-</div>
-
-</body>
-  
-<script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-
-    <script  src="{% static 'register/js/index.js' %}"></script>
-<!-- 
-    <script type="text/javascript">
-      console.log("OK");
-      $('#errors_log').hide()
-    $(document).on('submit','#myform',function(e){
-      e.preventDefault();
-      // console.log($('input[name=csrfmiddlewaretoken]').val());
-      $.ajax({
-        type:'POST',
-        url:"",
-        data:{
-          team_name:$('#team_name').val(),
-          team_leader:$('#team_leader').val(),
-          accomodation:$('#accomodation').val(),
-          contact:$('#contact').val(),
-          email:$("#emid").val(),
-          offline_reg:$('#offline_reg').is(":checked"),
-          csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
-        },
-        success:function(json){
-          // alert("It worked");
-          if(json['error_message']){
-            if(json['error_message']=='success'){
-              $('#errors_log').hide()
-              $('#myform').hide();
-              $('body').append("<p>Coooool</p>");
-              console.log(json['cost']);
-            }
-            console.log(json['error_message']);
-            $('#errors_log').show()
-            $('#errors_log').html(json['error_message'])
+        <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an 
+        <strong>outdated</strong> browser. Please 
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    </p>
+    <![endif]-->
+        <!-- Add your site or application content here -->
+        <!-- Preloader Start Here -->
+        <div id="preloader" class="preloader">
+            <div class="items">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+        <!-- Preloader End Here -->
+       <div id="wrapper" class="wrapper">
+            <!-- Header Area Start Here -->            
+            <header>
+                <div id="header-one" class="header-area header-fixed full-width-compress">
+                    <div class="main-menu-area" id="sticker">
+                        <div class="container-fluid">
+                            <div class="row no-gutters d-flex align-items-center">
+                                <div class="col-lg-2 col-md-2 d-none d-lg-block">
+                                    <div class="logo-area">
+                                        <a href="{% static 'index' %}" >
+                                            <img src="{% static 'img/logo.png' %}" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-6 possition-static">
+                                    <div class="eventalk-main-menu">
+                                        <nav class="d-none d-lg-block">
+                                            <ul>
+                                                <li class="current">
+                                                    <a href="{% url 'index' %}">Home</a>
+                                                
+                                                </li>
+                                                <li class="menu-justify">
+                                                    <a href="{% url 'events' %}">Events</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'index' %}#pronite">Pronites & Talks</a>
+                                                    
+                                                </li>
+                                               
+                                                <li>
+                                                    <a href="{% url 'index' %}#sponsor">Sponsors</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="{% url 'gallery' %}">gallery</a>
+                                                </li>
+                                                <li>
+                                                        <a href="{% url 'team' %}">Team</a>
+                                                    </li>
+                                                <!--<li>
+                                                    <a href="{% static '#contact">Contact</a>
+                                                </li>-->
+                                            <!--    <li class="current">
+                                                    <a href="{% static 'team.html">team</a>
+                                                
+                                                </li>-->
+                                            </ul>
+                                        </nav>
+                                        <!-- Mobile Menu start -->
+                                        <nav id="dropdown" class="d-md-none">
+                                            <ul>
+                                                <li>
+                                                    <a href="{% url 'index' %}#home">Home</a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'events' %}">Events</a>
+                                                    
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="{% url 'index' %}#pronite">Pronites & Talks</a>
+                                                   
+                                                </li>
+                                                
+                                                <li>
+                                                    <a href="{% url 'index' %}#sponsor">Sponsors</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'gallery' %}">gallery</a>
+                                                </li>
+                                                <li>
+                                                        <a href="#">Team</a>
+                                                    </li>
+                                                    <li>
+                                                            <a href="{% url 'register' %}" title="Buy Tickets" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
+                                                        </li>
+                                              <!--  <li>
+                                                    <a href="#contact">Contact</a>
+                                                </li>-->
+                                            <!--    <li class="current">
+                                                    <a href="team.html">team</a>
+                                                
+                                                </li>-->
+                                            </ul>
+                                        </nav>
+                                        <!-- Mobile Menu End -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 d-none d-lg-block">
+                                    <ul class="header-action-items">
+                                        <li>
+                                            <a href="{% url 'register' %}" title="Buy Tickets" class="btn-fill size-xs color-yellow border-radius-5">Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Header Area End Here -->
+          
             
-          }
-          else{           
-            // $('#errors_log').show()
-            console.log("No error message received");
-          }
-        },
-        failure:function(){
-          alert("nopes");
-        }
-      })
-    })
-    </script>
+            <!-- Inne Page Banner Area End Here -->
+            <section class="inner-page-banner" style="background-image: url({% static 'img/figure/inner-page-figure.jpg' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumbs-area">
+                                <h1>Core team</h1>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'index' %}">Home</a>
+                                    </li>
+                                    <li>team MEMBERS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Inne Page Banner Area End Here -->
+            <!-- Speaker Area Start Here -->
+            <section class="section-space-default bg-light overlay-icon-layout4">
+                <div class="container zindex-up zoom-gallery menu-list-wrapper">
+                    <div class="section-heading title-black color-dark text-left">
+                        <h2></h2>
+                        <!-- <p>team word</p> -->
+                    </div>
+                    <div class="row menu-list">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/EkanshSrivastva.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Ekansh Srivastva
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+919455225182</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/ekansh.srivastva" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:ekansh.srivastva.cer15@itbhu.ac.in" target="_blank" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/meant4ekansh/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/AmiratnaBhoyar.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Amiratna Bhoyar
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+919665724232</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/ababbhoyar" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:amiratna.bhoyar.che15@itbhu.ac.in" target="_blank" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/ami_iz_here/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/AnkurGoel.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Ankur Goel
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+917270845755</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/ankur.goel.779" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:ankur.goel.mec15@itbhu.ac.in" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/hybrid_skills/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/HarshChudasama.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Harsh Chudasama</a>
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+919428441043</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/harsh.chudasama.568" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:harsh.chudasama.phe15@itbhu.ac.in" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/harsh.chudasama/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/DarshanJhunjhunwala.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Darshan Jhunjhunwala</a>
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+919670164239</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/darshan.jhunjhunwala1" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:darshan.jhunjhunwala.phe15@itbhu.ac.in" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/peacebaba1/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/AditiPathak.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Aditi Pathak</a>
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+919628212838</div>
+                                </div>
+                                <div class="item-social">
+                                   <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/aditi.pathak.52" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:aditi.student.bme15@itbhu.ac.in" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/__aditipathak__/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/ParamDoshi.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Param Doshi</a>
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+917081746145</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/param.doshi.3" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:param.doshi.met15@itbhu.ac.in" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/paramdoshi3/" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 menu-item">
+                            <div class="speaker-layout3">
+                                <img src="{% static 'team/KshitijGangwar.png' %}" alt="speaker" class="img-fluid">
+                                <div class="item-title">
+                                    <h3 class="title title-bold color-light hover-yellow">
+                                        Kshitij Gangwar</a>
+                                    </h3>
+                                    <div class="title-light size-md text-left color-light">+918791285201</div>
+                                </div>
+                                <div class="item-social">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.facebook.com/kshitij.gangwar.7" target="_blank" title="facebook">
+                                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:kshitij.gangwar.mat15@itbhu.ac.in" title="mail">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/kshitij.gangwar" target="_blank" title="instagram">
+                                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </section>
+            <!-- Speaker Area End Here -->
+            <!-- Footer Area Start Here -->
+            
+            <!-- Footer Area End Here -->
+        </div>
+        <!-- Wrapper End -->
+        <!-- jquery-->
+        <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+        <!-- Plugins js -->
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <!-- Popper js -->
+        <script src="{% static 'js/popper.js' %}"></script>
+        <!-- Bootstrap js -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Meanmenu Js -->
+        <script src="{% static 'js/jquery.meanmenu.min.js' %}"></script>
+        <!-- Srollup js -->
+        <script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+        <!-- Isotope js -->
+        <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+        <!-- Magnific Popup -->
+        <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Custom Js -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
 
- -->
-
-</body>
 
 </html>

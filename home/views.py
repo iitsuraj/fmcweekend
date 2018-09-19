@@ -27,7 +27,10 @@ def gallery(request):
 def events(request):
     return render(request,'home/events.html')
 
+def team(request):
+    return render(request,'home/team.html')
 
+    
 @csrf_exempt
 def register(request):
     template_name='home/register.html'
@@ -170,7 +173,7 @@ def register(request):
 
     
         except:
-            print("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
+            # print("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
             messages.warning(request,"Fields not filled properly")
             return render(request,template_name,context=context)    
         
