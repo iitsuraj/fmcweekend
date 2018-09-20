@@ -33,8 +33,8 @@ class Registration(models.Model):
     f_selfie=models.BooleanField(default=False)
     f_memoravel=models.BooleanField(default=False)
     f_monogram=models.BooleanField(default=False)
-    w_design=models.IntegerField(default=0)
-    w_nikon=models.IntegerField(default=0)
+    # w_design=models.IntegerField(default=0)
+    # w_nikon=models.IntegerField(default=0)
     def __str__(self):
         return self.team_name
     class Meta:

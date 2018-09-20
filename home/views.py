@@ -10,7 +10,10 @@ import requests
 from django.views.decorators.csrf import csrf_exempt
 from .models import Registration
 from django.http import Http404
-api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://www.instamojo.com/api/1.1/')
+from django.conf import settings
+from django.core.mail import send_mail
+
+api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/')
 
 
 # Create your views here.
@@ -194,11 +197,21 @@ def paymentConfirmationView(request):
             s+="<p>"+"Status: "+response['payment_request']['status'] 
             # return HttpResponse(s)      
             if(pstatus=="Credit"):
-                print("HI")
+                # print("HI")
                 reg_obj=Registration.objects.filter(payment_request_id=str(payment_request_id))[0]
                 reg_obj.payment_id=payment_id
                 reg_obj.payment_status=1
                 reg_obj.save()
+                # print("SAVED")
+                team_id=reg_obj.id
+                # print(team_id)
+                subject="Thanks for registration."
+                subject+="<br> Your team id is "+ str(team_id)
+                from_email=settings.DEFAULT_FROM_EMAIL
+                to_email=str(reg_obj.email)
+                # print(to_email)
+                send_mail("Test Mail",subject,from_email,[to_email],fail_silently=True)
+                print("YY")
             return HttpResponse(s)
         except:
             raise Http404
