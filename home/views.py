@@ -1,19 +1,19 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect,HttpResponse,JsonResponse
+from django.http import HttpResponseRedirect,HttpResponse
 from django.urls import reverse 
-import json
 from instamojo_wrapper import Instamojo
 from django.contrib import messages
 from home import API_KEY,AUTH_TOKEN,EVENT_COST,ACCOMODATION_COST,ALL_EVENT_COST
 import re
-import requests
 from django.views.decorators.csrf import csrf_exempt
 from .models import Registration
 from django.http import Http404
 from django.conf import settings
 from django.core.mail import send_mail
 
-api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/')
+
+#use test.instamojo.com for sandbox account and uncomment the other keys in __init__.py
+api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://www.instamojo.com/api/1.1/')
 
 
 # Create your views here.
@@ -143,11 +143,15 @@ def register(request):
             if(not re.match(r'[6-9]\d{9}',dict['contact'])):
                 messages.warning(request,"Enter a valid phone number")
                 return render(request,template_name,context=context)
+            
             #amount calculation
             dict['amount_paid']=dict['accomodation']*int(ACCOMODATION_COST)*int(dict['offline_reg']) + paidevents*int(EVENT_COST)*isonlinepaid +int(dict['offline_reg'])*int(ALL_EVENT_COST)*int(dict['team_size'])
-            # print("LOL")
+            
+            #for debugging, uncomment for production
             for i in dict:
                 print(i,dict[i])
+
+            #redirect to payment portal only if total sum is more than 0
             if(dict['amount_paid']>0):
                 #instamojo magic here
                 response = api.payment_request_create(
@@ -168,15 +172,13 @@ def register(request):
                 reg_obj=Registration(**dict)
                 reg_obj.save()
                 print(reg_obj.amount_paid)
+                #browser should support cookies
                 request.session['team_id']=reg_obj.id
                 print(request.session['team_id'])
-                # for i in dict:
-                    # print(i,dict[i])
                 return HttpResponseRedirect(reverse("free_checkout"))
 
     
         except:
-            # print("NOOOOOOOOOOOOOOOOOOOOOOOOOOOOO")
             messages.warning(request,"Fields not filled properly")
             return render(request,template_name,context=context)    
         
@@ -197,21 +199,17 @@ def paymentConfirmationView(request):
             s+="<p>"+"Status: "+response['payment_request']['status'] 
             # return HttpResponse(s)      
             if(pstatus=="Credit"):
-                # print("HI")
                 reg_obj=Registration.objects.filter(payment_request_id=str(payment_request_id))[0]
                 reg_obj.payment_id=payment_id
                 reg_obj.payment_status=1
                 reg_obj.save()
-                # print("SAVED")
                 team_id=reg_obj.id
-                # print(team_id)
-                subject="Thanks for registration."
-                subject+="<br> Your team id is "+ str(team_id)
+                s+="<p>"+"Team ID: "+ str(team_id)
+                message_body="Thanks for registration."
+                message_body+="<br> Your team id is FMCW"+ str(team_id)
                 from_email=settings.DEFAULT_FROM_EMAIL
                 to_email=str(reg_obj.email)
-                # print(to_email)
-                send_mail("Test Mail",subject,from_email,[to_email],fail_silently=True)
-                print("YY")
+                send_mail("FMC Weekend Registration Acknowledgement",message_body,from_email,[to_email],fail_silently=True)
             return HttpResponse(s)
         except:
             raise Http404
@@ -224,8 +222,10 @@ def freeCheckoutView(request):
             # return(HttpResponse("HI"))
             raise Http404
         reg_obj=Registration.objects.filter(id=team_id)[0]
-        p="<p>"+str(reg_obj.team_leader)+"</p>"
-        return HttpResponse(reg_obj.team_leader)
+        p="<p>"+"Thanks for registration.</p>"
+        p+="<p> Your team id is "+str(team_id)+"</p>"
+        p+"<p> Team Leader: "+str(reg_obj.team_leader)+"</p>"
+        return HttpResponse(p)
     except:
         raise Http404
 

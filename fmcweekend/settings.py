@@ -118,13 +118,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-# SEND_GRID_API_KEY='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'
 STATIC_URL = '/static/'
 MEDIA_URL='/media/'
-# EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+
+
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'apikey'
+
+#create a new account on sendgrid and add the api key here
 EMAIL_HOST_PASSWORD = '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'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+#Change this to your email id
 DEFAULT_FROM_EMAIL='amriamritansh@yahoo.in'
